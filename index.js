@@ -1,11 +1,14 @@
 const express = require('express');
 const path = require('path');
+const open = require('open');
 const port = process.env.PORT || 3000;
 const app = express();
 app.listen(port, function() {
 	console.log('Listening on port %d', port);
 	if(process.send) {
-		process.send({event: 'online', url: 'http://localhost:'+port});
+		process.send({event: 'online', url: 'http://localhost:' + port});
+	} else {
+		open('http://localhost:' + port);
 	}
 });
 
