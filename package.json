@@ -1,0 +1,54 @@
+{
+  "name": "react-firebase",
+  "version": "1.0.0",
+  "description": "Making a react app with firebase",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack -d --watch",
+    "build": "webpack --optimize-minimize --progress -p",
+    "serve": "node index.js",
+    "dev-serve": "browser-refresh index.js"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/znewton/react-firebase.git"
+  },
+  "keywords": [
+    "react",
+    "firebase",
+    "js",
+    "sass"
+  ],
+  "author": "znewton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/znewton/react-firebase/issues"
+  },
+  "homepage": "https://github.com/znewton/react-firebase#readme",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-react": "^6.23.0",
+    "browser-refresh": "^1.7.1",
+    "css-loader": "^0.28.0",
+    "express": "^4.15.2",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "node-sass": "^4.5.2",
+    "path": "^0.12.7",
+    "sass-loader": "^6.0.3",
+    "serve": "^5.1.2",
+    "webpack": "^2.3.2"
+  }
+}
