@@ -15,6 +15,7 @@ app.listen(port, function() {
 app.use(express.static(__dirname + '/public'));
 
 app.get('*', function (request, response) {
+	// console.log(request);
 	response.sendFile(path.resolve(__dirname, 'public', 'index.html'));
 });
 

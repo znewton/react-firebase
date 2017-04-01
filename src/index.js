@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import * as firebase from 'firebase/app';
+import firebase from 'firebase';
 import { BrowserRouter } from 'react-router-dom'
 
 import './index.scss';
@@ -15,10 +15,12 @@ const config = {
 	storageBucket: "react-firebase-996a0.appspot.com",
 	messagingSenderId: "963135217420"
 };
+
 firebase.initializeApp(config);
+let provider = new firebase.auth.GoogleAuthProvider();
 
 render(
 	<BrowserRouter>
-		<App firebase={firebase} />
+		<App provider={provider} />
 	</BrowserRouter>
 , document.getElementById('root'));
